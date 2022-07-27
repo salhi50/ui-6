@@ -1,0 +1,171 @@
+@use './variables' as *;
+
+// media queries mixin
+@mixin media($type) {
+    @if $type == 'mobile' {
+        @media screen and (max-width: 768px) {
+            @content;
+        }
+    }
+    @else if $type == 'small' {
+        @media screen and (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $type == 'medium' {
+        @media screen and (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $type == 'large' {
+        @media screen and (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
+.main-btn{
+    background-color: $main-color;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: $font-medium-2!important;
+    min-height: 42px !important;
+    padding: .5rem 1.1rem !important;
+}
+
+
+.right{
+    background-color: #dddddd;
+}
+main{
+    min-height: 100vh;
+    width: 100%;
+}
+
+// left side
+
+.left {
+    @media screen and (max-width: 991px) {
+      width: 100% !important;   
+    }
+    .form--container{
+        padding: 35px 15px;
+        width: 400px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .form--subtitle{
+        font-size: $font-medium;
+        color: $grey-color;
+    }
+    .form--google-btn{
+        border: 1px solid #e5e5e5;
+        color: $main-color;
+        font-size: $font-medium;
+        min-height: 42px !important;
+    }
+    .form--or{
+        .or{
+            color: $grey-color;
+            font-size: $font-medium;
+        }
+        .line{
+            height: 1px;
+            background-color: #e5e5e5;
+        }
+    }
+    .form--email-input{
+        border: 0 !important;
+        border-bottom: 1px solid #e5e5e5 !important;
+        padding-bottom: 7px !important;
+        padding-top: 7px !important;
+        font-size: $font-big !important;
+    }
+    .form--password-input{
+        @extend .form--email-input;
+    }
+    .form--checkbox{
+        input{
+            transform: translateY(1px);
+        }label{
+            font-size: $font-medium;
+        }
+    }
+    .form--forgot{
+        font-size: $font-medium;
+    }
+    .form--account{
+        font-size: $font-medium;
+        p{
+            color: $grey-color;
+        }a{
+            color: #161616 !important;
+        }
+    }
+    ::placeholder{
+        color: $grey-color;
+    }
+    .form--google-img{
+        width: 15px;
+        height: 15px;
+    }
+}
+
+// right side
+
+
+.right {
+    @include media(small) {
+        display: none;
+    }
+    @include media(mobile) {
+        display: none;
+    }
+    @include media(medium) {
+        display: block;
+    }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        content: '';
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05),
+            rgba(0,0,0,.1),
+            rgba(0,0,0,80%),
+        );
+        z-index: 0;
+    }
+    .review{
+        background-clip: padding-box;
+    }
+    .review--info{
+        font-size: $font-medium;
+        font-weight: 500
+    }
+    .review--job{
+        font-size: $font-small;
+    }
+    .review--stars{
+        font-size: small;
+        transform: translateY(-12px);
+    }
+    .review--left-arrow-btn{
+        border: 1px solid rgb(250,250,250,50%);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: medium;
+    }
+    .review--right-arrow-btn{
+        @extend .review--left-arrow-btn;
+    }
+}   

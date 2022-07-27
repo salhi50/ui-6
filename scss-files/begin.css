@@ -1,0 +1,139 @@
+.main-btn {
+  background-color: #161616;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 15px !important;
+  min-height: 42px !important;
+  padding: 0.5rem 1.1rem !important;
+}
+
+.right {
+  background-color: #dddddd;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .left {
+    width: 100% !important;
+  }
+}
+.left .form--container {
+  padding: 35px 15px;
+  width: 400px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.left .form--subtitle {
+  font-size: 14px;
+  color: #808080;
+}
+.left .form--google-btn {
+  border: 1px solid #e5e5e5;
+  color: #161616;
+  font-size: 14px;
+  min-height: 42px !important;
+}
+.left .form--or .or {
+  color: #808080;
+  font-size: 14px;
+}
+.left .form--or .line {
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.left .form--email-input, .left .form--password-input {
+  border: 0 !important;
+  border-bottom: 1px solid #e5e5e5 !important;
+  padding-bottom: 7px !important;
+  padding-top: 7px !important;
+  font-size: 16px !important;
+}
+.left .form--checkbox input {
+  transform: translateY(1px);
+}
+.left .form--checkbox label {
+  font-size: 14px;
+}
+.left .form--forgot {
+  font-size: 14px;
+}
+.left .form--account {
+  font-size: 14px;
+}
+.left .form--account p {
+  color: #808080;
+}
+.left .form--account a {
+  color: #161616 !important;
+}
+.left ::-moz-placeholder {
+  color: #808080;
+}
+.left :-ms-input-placeholder {
+  color: #808080;
+}
+.left ::placeholder {
+  color: #808080;
+}
+.left .form--google-img {
+  width: 15px;
+  height: 15px;
+}
+
+.right {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .right {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .right {
+    display: block;
+  }
+}
+.right::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
+  z-index: 0;
+}
+.right .review {
+  background-clip: padding-box;
+}
+.right .review--info {
+  font-size: 14px;
+  font-weight: 500;
+}
+.right .review--job {
+  font-size: 13px;
+}
+.right .review--stars {
+  font-size: small;
+  transform: translateY(-12px);
+}
+.right .review--left-arrow-btn, .right .review--right-arrow-btn {
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: medium;
+}/*# sourceMappingURL=begin.css.map */
